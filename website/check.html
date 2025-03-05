@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pixicart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style4.css">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body class=".bg-dark">
+  
+  <div class="offcanvas offcanvas-bottom" id="offcanvaslogin">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title d-none d-sm-block">Login</h6>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body px-0">
+      <div class="col-75">
+        <div class="container">
+          <form action="htmldata.html">
+            <input class="form-control" type="text" value="">Username:<br>
+            <input class="form-control" type="password" value="">Password:<br>
+            <input class="btn btn-outline-primary"  type="submit" value="Login">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+            <a href="#">Forgot Password?</a>
+            <a href="#">Create Account</a>
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  </div>
+  <div class="offcanvas offcanvas-bottom" id="offcanvascontact">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title d-none d-sm-block">Contact</h6>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body px-0">
+      <div class="col-75">
+        <div class="container">
+          <form action="/submit.php">
+            <a class="text-dark icon-link icon-link-hover" mailto="pixicart2024@gmail.ro"><i class="bi bi-envelope"></i> pixicart2024@gmail.ro</a><br />
+            <a class="text-dark icon-link icon-link-hover" tel="+40723467809"><i class="bi bi-telephone"></i> +40723467809</a><br />
+          </form>
+         </div>
+      </div>      
+    </div>
+  </div>  
+  
+<div class="container">
+    <br />
+<nav class="navbar navbar-expand-lg bg-body-tertiary rounded">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><span class="text-succes">PIXI</span><span class="text-danger">CART</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="htmldata.html">Home</a>
+          </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Offers</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="action.html">Action</a></li>
+                <li><a class="dropdown-item" href="adventure.html">Adventure</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="else.html">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">PC games</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="action.html">Action</a></li>
+                <li><a class="dropdown-item" href="adventure.html">Adventure</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="else.html">Something else here</a></li>
+              </ul>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">PS games</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="action.html">Action</a></li>
+                  <li><a class="dropdown-item" href="adventure.html">Adventure</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="else.html">Something else here</a></li>
+                </ul>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">XBOX games</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="action.html">Action</a></li>
+                    <li><a class="dropdown-item" href="adventure.html">Adventure</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="else.html">Something else here</a></li>
+                  </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvascontact"><i class="bi bi-telephone"></i></a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="check.html"><i class="bi bi-cart-check"></i></a>
+                <div class="row">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvaslogin"><i class="bi bi-person-lines-fill"></i></a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html"><i class="bi bi-file-earmark-person"></i></a><br />
+            </li>
+          </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">
+                <i class="bi bi-binoculars"></i>
+              </button>
+              
+            </form>                                                  
+        
+        </div>
+      </div>
+    <br></nav>
+</div>
+
+</br>
+
+
+
+<div class="container">
+  <div class="container-fluid">
+      <div class="row">
+          <aside class="col-lg-9">
+              <div class="card">
+                  <div class="table-responsive">
+                      <table class="table table-borderless table-shopping-cart">
+                          <thead class="text-muted">
+                              <tr class="small text-uppercase">
+                                  <th scope="col">Product</th>
+                                  <th scope="col" width="120">Quantity</th>
+                                  <th scope="col" width="120">Price</th>
+                                  <th scope="col" class="text-right d-none d-md-block" width="200"></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      <figure class="itemside align-items-center">
+                                          <div class="aside"><img src="out.jpeg" class="img-sm"></div>
+                                          <figcaption class="info"> <a href="#" class="title text-dark" data-abc="true">OUTLAST 2</a>
+                                          </figcaption>
+                                      </figure>
+                                  </td>
+                                  <td> 
+                                      <select class="form-control">
+                                         
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                          <option>6</option>
+                                          <option>7</option>
+                                          <option>8</option>
+                                          <option>9</option>
+                                          <option>10</option>
+                                      </select> 
+                                  </td>
+                                  <td>
+                                      <div class="price-wrap"> <var class="price">150$</var> </div>
+                                  </td>
+                                  <td class="text-right d-none d-md-block"> 
+                                      
+                                      <a href="" class="btn btn-light btn-remove" data-abc="true"> Remove</a> 
+                                  </td>
+                              </tr>
+                              
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </aside>
+          <aside class="col-lg-3">
+              <div class="card mb-3">
+                  <div class="card-body">
+                      <form>
+                          <div class="form-group"> <label>Have coupon?</label>
+                              <div class="input-group"> <input type="text" class="form-control coupon" name="" placeholder="Coupon code"> <span class="input-group-append"> <button class="btn btn-primary btn-apply coupon">Apply</button> </span> </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-body">
+                      <dl class="dlist-align">
+                          <dt>Total price:</dt>
+                          <dd class="text-right ml-3 total-price">210$</dd>
+                      </dl>
+                      <dl class="dlist-align">
+                          <dt>Discount: <span class="discount">0%</span></dt>
+                          <dd class="text-right text-danger ml-3"></dd>
+                      </dl>
+                      <dl class="dlist-align">
+                          <dt>Total:</dt>
+                          <dd class="text-right text-dark b ml-3"><strong class="final-total">210$</strong></dd>
+                      </dl>
+                      <hr> 
+                      <a href="payment.html" class="btn btn-out btn-primary btn-square btn-main" data-abc="true"> Make Purchase </a> 
+                      <a href="htmldata.html" class="btn btn-out btn-success btn-square btn-main mt-2" data-abc="true">Continue Shopping</a>
+                  </div>
+              </div>
+          </aside>
+      </div>
+  </div>
+</div>
+
+  
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Function to recalculate total price
+      function recalculateTotal() {
+          let total = 0;
+          document.querySelectorAll('.table-shopping-cart tbody tr').forEach(function(row) {
+              const price = parseFloat(row.querySelector('.price').textContent.replace('$', ''));
+              const quantity = parseInt(row.querySelector('select').value);
+              total += price * quantity;
+          });
+          document.querySelector('.total-price').textContent = total + '$';
+          document.querySelector('.final-total').textContent = total + '$';
+      }
+  
+      // Add event listeners to quantity selectors
+      document.querySelectorAll('.table-shopping-cart tbody tr select').forEach(function(select) {
+          select.addEventListener('change', recalculateTotal);
+      });
+  
+      // Apply coupon
+      document.querySelector('.btn-apply.coupon').addEventListener('click', function(event) {
+          event.preventDefault();
+          const couponCode = document.querySelector('.coupon').value;
+          let discount = 0;
+          if (couponCode === 'DISCOUNT10') {
+              discount = 10;
+          } else if (couponCode === 'DISCOUNT20') {
+              discount = 20;
+          }
+          
+          const total = parseFloat(document.querySelector('.total-price').textContent.replace('$', ''));
+          const discountedTotal = total - (total * discount / 100);
+          document.querySelector('.final-total').textContent = discountedTotal + '$';
+          document.querySelector('.discount').textContent = discount + '%';
+      });
+  
+      // Add event listeners to remove buttons
+      document.querySelectorAll('.btn-remove').forEach(function(button) {
+          button.addEventListener('click', function(event) {
+              event.preventDefault();
+              const row = button.closest('tr');
+              row.remove();
+              recalculateTotal();
+          });
+      });
+  
+      // Initial total calculation
+      recalculateTotal();
+  });
+  </script>
+  
+
+
+
+
+  <br />
+          
+    <div class="container">
+        <h5 class="text-light">Where you can find us</h5>
+        <h5><i class="bi bi-youtube text-danger"></i> <i class="bi bi-facebook text-info"></i> <i class="bi bi-instagram text-primary"></i> <i class="bi bi-whatsapp text-success"></i>
+        </h5>
+        <hr class="text-secondary"/>
+        <a class="text-light icon-link icon-link-hover" href="about.html"><i class="bi bi-file-earmark-person"></i> About Us</a><br />
+        <a class="text-light icon-link icon-link-hover" href="#"><i class="bi bi-card-text"></i> Terms & Conditions</a><br />
+        <a class="text-light icon-link icon-link-hover">Contact</a><br />
+        <a class="text-light icon-link icon-link-hover" mailto="pixicart2024@gmail.ro"><i class="bi bi-envelope"></i> pixicart2024@gmail.ro</a><br />
+        <a class="text-light icon-link icon-link-hover" tel="+40723467809"><i class="bi bi-telephone"></i> +40723467809</a><br />
+       
+
+    
+    
+</body>
+</html>
