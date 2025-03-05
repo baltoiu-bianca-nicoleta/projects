@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERMA BOD</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body{
+    background-image:url(ferma.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+        .custom-border {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: black;
+            width: 20 cm;
+            height: 15 cm;
+            position: center;
+            padding: 50px;
+            text-align: center;
+        }
+
+        label {
+            color: black;
+            width: 10 cm;
+            height: 5 cm;
+        }
+
+        .container-fluid {
+            max-width: 700px;
+        }
+
+        input[type=password],
+        input[type=email] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        header {
+            padding-left: 20%;
+            position: left;
+            color: black;
+            font-size: 25px;
+        }
+
+        a {
+            color: navy;
+            width: 10 cm;
+            height: 5 cm;
+        }
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group .password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+    </style>
+</head>
+<body>
+   
+    <header>FERMA</header>
+    
+
+    <div class="container mt-3">
+        <div class="custom-border">
+            <h2 class="mb-4">LOGIN</h2>
+    
+            <form id="joinUsForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group password-group">
+                    <label for="pwd">Password:</label>
+                    <div class="input-group">
+                        <input type="password" id="pwd" name="pwd" class="form-control" required>
+                        <span class="password-toggle-icon"><i class="fa fa-eye"></i></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+                <a href="#">Forgot Password?</a>
+                
+            </form>
+    
+        </div>
+    </div>
+    <script>
+    document.getElementById('joinUsForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('pwd').value;
+    
+        
+        authenticateUser(email, password);
+    });
+    
+   
+    function authenticateUser(email, password) {
+      
+        if (email === 'utilizator@exemplu.com' && password === 'parolasigura') {
+            alert('Login successful!');
+            window.location.href = 'home.html'; 
+        } else {
+            alert('Invalid email or password. Please try again.');
+            document.getElementById('joinUsForm').reset();
+        }
+    }
+    
+    
+    const togglePassword = document.querySelector('.password-toggle-icon');
+    const passwordField = document.getElementById('pwd');
+    
+    togglePassword.addEventListener('click', function() {
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        this.querySelector('i').classList.toggle('fa-eye-slash');
+        this.querySelector('i').classList.toggle('fa-eye');
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+-- database: ./db.sqlite3
+
+SELECT * FROM employee
+ORDER BY `user` ASC;

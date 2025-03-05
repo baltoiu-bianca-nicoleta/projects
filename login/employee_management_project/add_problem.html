@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERMA BOD</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'employees/css/styles.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle medium shade4"></div>
+        <div class="circle small shade5"></div>
+    </div>
+    <button id="langToggle" style="position: absolute; top: 10px; right: 10px;">
+        <span class="lang-ro">RO</span>
+        <span class="lang-en">EN</span>
+    </button>
+
+    <header>FERMA BOD</header>
+    <header>S.C L&D LUCA IND</header>
+    <header>RO 6652160</header>
+    <br>
+  
+    <div class="container mt-3">
+        <div class="custom-border">
+            <h2 class="mb-4"></h2>
+
+            <form id="chestionar" method="post" action="{% url 'add_problem' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="email">Utilizator:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="stable">Selectează incinta:</label>
+                    <select id="stable" name="stable" required>
+                        <option value="1">Grajd 1</option>
+                        <option value="2">Grajd 2</option>
+                        <option value="3">Grajd 3</option>
+                        <option value="4">Grajd 4</option>
+                        <option value="5">Grajd 5</option>
+                        <option value="6">Grajd 6</option>
+                        <option value ="7">Vitei</option>
+                        <option value="8">FNC</option>
+                        <option value="9">Magazii</option>
+                        <option value="10">Incinta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="text">Înregistrează o problemă:</label>
+                    <input type="text" id="text" name="text" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <a href="{% url 'generate_report' %}" class="btn btn-secondary mt-3">Descarcă Raport CSV</a>
+        </div>
+    </div>
+
+    <script src="{% static 'employees/js/script.js' %}"></script>
+</body>
+</html>

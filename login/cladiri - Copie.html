@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTOTIP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style> 
+  
+  body{
+    background-image:url(ferma.jpg) ;
+            background-size: cover;
+            
+            background-repeat: no-repeat;
+}
+
+
+
+header{
+    padding-left: 20%;
+    position: left;
+    color:black;
+   font-size: 35px;
+ 
+  }
+
+P{
+    color:black;
+    font-size: 35px;
+}
+h2{
+  color:white;
+  font-size: 25px;
+  padding-right: 2%;
+}
+
+ul{
+  color:white;
+  font-size: 20px;
+}
+a{
+  color:white;
+  font-size: 20px;
+}
+
+
+#langToggle {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#langToggle:hover {
+  background-color: #f0f0f0;
+}
+
+.lang-ro, .lang-en {
+  display: none;
+}
+
+.menu-container {
+            display: flex;
+            justify-content: space-around; /* Distribute space evenly */
+            align-items: center; /* Center images vertically */
+            margin: 20px 0;
+        }
+
+        /* Style for each image */
+        .menu-container img {
+            width: 150px; /* Set width and height to make the image square */
+            height: 150px;
+            border-radius: 50%; /* Make the image circular */
+            cursor: pointer; /* Show a pointer cursor when hovering */
+            transition: transform 0.3s; /* Animation for scaling */
+            object-fit: cover; /* Ensure the image fits within the circle */
+        }
+
+        /* Image scaling effect on hover */
+        .menu-container img:hover {
+            transform: scale(1.1); /* Slightly increase the size */
+        }
+  </style>
+  </head>
+  <body>
+    
+
+
+
+    <button id="langToggle" style="position: absolute; top: 10px; right: 10px;">
+      <span class="lang-ro">RO</span>
+      <span class="lang-en">EN</span>
+    </button>
+
+
+
+  <header>FERMA BOD</header>
+  <header>S.C L&D LUCA IND</header>
+  <header>RO 6652160</header>
+<br>
+  <center>
+    <p>REGISTRU DE EVIDENȚĂ ZILNICĂ A INCINTEI/ ADĂPOSTURILOR/ ANIMALELOR DIN CADRUL FERMEI</p>
+  </center><br></br>
+  <div class="menu-container">
+  
+    <a href="FNC.html">
+      
+        <img src="Cows.jpg" alt="Rubric 1">
+    </a>
+    <a href="MAG.html">
+        <img src="baby.jpg" alt="Rubric 2">
+    </a>
+    <a href="INC.html">
+        <img src="magazie.jpg" alt="Rubric 3">
+    </a>
+</div>
+
+<script>
+const translations = {
+  en: {
+    "FERMA BOD": "BOD FARM",
+    "REGISTRU DE EVIDENȚĂ ZILNICĂ A INCINTEI/ ADĂPOSTURILOR/ ANIMALELOR DIN CADRUL FERMEI": "DAILY RECORD OF PREMISES / SHELTERS / ANIMALS WITHIN THE FARM",
+    "MENIU": "MENU",
+    "GRAJDUL 1": "STABLE 1",
+    "GRAJDUL 2": "STABLE 2",
+    "GRAJDUL 3": "STABLE 3",
+    "GRAJDUL 4": "STABLE 4",
+    "GRAJDUL 5": "STABLE 5",
+    "GRAJDUL 6": "STABLE 6",
+    "VIȚEI MICI": "SMALL CALVES",
+    "FNC": "FNC",
+    "MAGAZII": "WAREHOUSES",
+    "INCINTĂ": "PREMISES"
+  },
+  ro: {
+    "BOD FARM": "FERMA BOD",
+    "DAILY RECORD OF PREMISES / SHELTERS / ANIMALS WITHIN THE FARM": "REGISTRU DE EVIDENȚĂ ZILNICĂ A INCINTEI/ ADĂPOSTURILOR/ ANIMALELOR DIN CADRUL FERMEI",
+    "MENU": "MENIU",
+    "STABLE 1": "GRAJDUL 1",
+    "STABLE 2": "GRAJDUL 2",
+    "STABLE 3": "GRAJDUL 3",
+    "STABLE 4": "GRAJDUL 4",
+    "STABLE 5": "GRAJDUL 5",
+    "STABLE 6": "GRAJDUL 6",
+    "SMALL CALVES": "VIȚEI MICI",
+    "WAREHOUSES": "MAGAZII",
+    "PREMISES": "INCINTĂ"
+  }
+};
+
+let currentLang = 'ro';
+
+function translatePage() {
+  const elements = document.querySelectorAll('body *');
+  elements.forEach(element => {
+    if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
+      const text = element.textContent.trim();
+      const translatedText = translations[currentLang][text];
+      if (translatedText) {
+        element.textContent = translatedText;
+      }
+    }
+  });
+
+   
+  currentLang = currentLang === 'ro' ? 'en' : 'ro';
+
+  
+  document.querySelectorAll('.lang-ro, .lang-en').forEach(el => el.style.display = 'none');
+  document.querySelector(`.lang-${currentLang === 'ro' ? 'en' : 'ro'}`).style.display = 'inline';
+}
+
+document.getElementById('langToggle').addEventListener('click', translatePage);
+
+translatePage();
+</script>
+
+  </body>
+  </html>
